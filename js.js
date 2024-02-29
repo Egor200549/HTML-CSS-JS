@@ -34,5 +34,11 @@ function submitForm(event) {
 
     let json = JSON.stringify(data);
 
-    document.write(json);
+    button[0].style.display = 'block';
+    overlay[0].style.display = 'none';
+    modal[0].style.display = 'none';
+
+    formData.forEach((value, key) => {
+        document.getElementsByClassName('start')[0].innerHTML += `<p>${key}: ${value}</p>`;
+    });
 }
